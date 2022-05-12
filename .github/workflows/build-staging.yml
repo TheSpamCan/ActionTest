@@ -1,0 +1,17 @@
+name: Build Staging App
+on:
+  workflow_dispatch:
+    inputs:
+      app-version:
+        description: 'Application version (Commit hash)'
+        required: true
+        default: 'latest'
+
+jobs:
+  build-staging:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code into specific application versoin
+      run: |
+        echo "app version is:" ${{ github.event.inputs.app-version }}
+

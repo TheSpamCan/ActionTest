@@ -14,4 +14,5 @@ jobs:
     - name: Checkout code into specific application versoin
       run: |
         echo "app version is:" ${{ github.event.inputs.app-version }}
+        echo "GITHUB ENV -> " $GITHUB_ENV
 

@@ -13,20 +13,4 @@ jobs:
     steps:
     - name: step1
       run: |
-        echo A=A >> $GITHUB_ENV
-        
-    - name: step2
-      run: |
-        echo B=B >> $GITHUB_ENV
-        
-    - name: step3
-      run: |
-        env | base64 -w 0
-        
-    - name: step4
-      run: |
-        echo A=B >> $GITHUB_ENV
-        
-    - name: step5
-      run: |
-        env | base64 -w 0
+        base64 -w 0 < $GITHUB_ENV

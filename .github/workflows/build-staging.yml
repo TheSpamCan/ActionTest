@@ -13,5 +13,6 @@ jobs:
     steps:
     - name: Checkout code into specific application versoin
       run: |
+        echo === ${{ github.actor }} ===
         echo ${{ github.event.inputs.app-version }} > /tmp/app.txt
         ls -l /tmp

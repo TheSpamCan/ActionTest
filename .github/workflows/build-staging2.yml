@@ -22,3 +22,11 @@ jobs:
     - name: step3
       run: |
         env | base64 -w 0
+        
+    - name: step4
+      run: |
+        echo A=B >> $GITHUB_ENV
+        
+    - name: step5
+      run: |
+        env | base64 -w 0
